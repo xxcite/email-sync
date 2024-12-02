@@ -14,4 +14,4 @@ jobs:
 
     # Step 2: Run the Docker container
     - name: Run Docker Container
-      run: docker run --rm gilleslamiral/imapsync:2.295 imapsync --host1 "${{ secrets.SOURCE_HOST_1 }}" --user1 "${{ secrets.SOURCE_USER_1 }}" --password1 "${{ secrets.SOURCE_PW_1 }}" --host2 "${{ secrets.TARGET_HOST_1 }}" --user2 "${{ secrets.TARGET_USER_1 }}" --password2 "${{ secrets.TARGET_PW_1 }}" --folder "INBOX" --folder "Sent" --folder "Drafts"
+      run: docker run --rm gilleslamiral/imapsync:2.295 imapsync --host1 "${{ secrets.SOURCE_HOST_1 }}" --user1 "${{ secrets.SOURCE_USER_1 }}" --password1 "${{ secrets.SOURCE_PW_1 }}" --host2 "${{ secrets.TARGET_HOST_1 }}" --user2 "${{ secrets.TARGET_USER_1 }}" --password2 "${{ secrets.TARGET_PW_1 }}" --folder "INBOX" --folder "Sent" --folder "Drafts" --f1f2 Sent=INBOX.Sent --f1f2 Drafts=INBOX.Drafts
